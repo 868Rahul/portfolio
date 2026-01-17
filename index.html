@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Singh</title>
+    <meta name="description"
+        content="Portfolio of Rahul Singh - Aspiring Full-Stack Developer and AI & Data Science Student">
+    <meta name="author" content="Rahul Singh">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon_img.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'hsl(var(--primary))',
+                        'primary-foreground': 'hsl(var(--primary-foreground))',
+                        secondary: 'hsl(var(--secondary))',
+                        'secondary-foreground': 'hsl(var(--secondary-foreground))',
+                        background: 'hsl(var(--background))',
+                        foreground: 'hsl(var(--foreground))',
+                        card: 'hsl(var(--card))',
+                        'card-foreground': 'hsl(var(--card-foreground))',
+                        muted: 'hsl(var(--muted))',
+                        'muted-foreground': 'hsl(var(--muted-foreground))',
+                        accent: 'hsl(var(--accent))',
+                        'accent-foreground': 'hsl(var(--accent-foreground))',
+                        border: 'hsl(var(--border))',
+                        'sidebar-background': 'hsl(var(--sidebar-background))',
+                        'sidebar-foreground': 'hsl(var(--sidebar-foreground))',
+                        'sidebar-primary': 'hsl(var(--sidebar-primary))',
+                        'sidebar-accent': 'hsl(var(--sidebar-accent))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-background text-foreground font-sans antialiased">
+    <!-- Navigation Sidebar -->
+    <nav id="sidebar"
+        class="fixed left-0 top-0 h-full w-64 bg-sidebar-background text-sidebar-foreground z-50 flex flex-col transform transition-transform duration-300">
+
+        <!-- Close Button for Mobile -->
+        <button id="sidebar-close"
+            class="lg:hidden absolute top-4 right-4 text-sidebar-foreground hover:text-sidebar-primary transition-colors z-10">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Profile Section (Fixed - No Scroll) -->
+        <div class="p-6 flex-shrink-0">
+            <div class="flex flex-col items-center">
+                <div
+                    class="profile-image-wrapper w-28 h-28 rounded-full flex items-center justify-center mb-4 border-2 border-primary/60 relative bg-secondary/80 overflow-hidden">
+                    <img src="assets/images/profile.png" alt="Profile" class="w-full h-full object-cover rounded-full"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <svg class="w-20 h-20 text-sidebar-foreground/50 hidden" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" style="display: none;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-white mb-2">Rahul Singh</h1>
+                <p class="text-sm text-sidebar-foreground/70 text-center mb-3">Full-Stack & AI/DS Student</p>
+                <!-- Horizontal white line -->
+
+            </div>
+        </div>
+        <!-- Navigation Menu (Scrollable) -->
+        <div class="flex-1 overflow-y-auto overflow-x-hidden px-6 pt-4">
+            <ul class="space-y-1 pb-4">
+                <li>
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="nav-link" data-section="about">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" class="nav-link" data-section="skills">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span>Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience" class="nav-link" data-section="experience">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <span>Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#education" class="nav-link" data-section="education">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 14v7m0 0v-7m0 7h6.75M12 21H5.25"></path>
+                        </svg>
+                        <span>Education</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#certifications" class="nav-link" data-section="certifications">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                            </path>
+                        </svg>
+                        <span>Certificates</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Download CV Button (Fixed - No Scroll) -->
+        <div class="p-6 border-t border-sidebar-border">
+            <a href="assets/Rahul_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                class="btn-download-cv w-full" download>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                    </path>
+                </svg>
+                <span>Download CV</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-40 lg:hidden hidden"></div>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-nav"
+        class="lg:hidden fixed top-0 left-0 right-0 bg-sidebar-background text-sidebar-foreground z-50 p-4">
+        <div class="flex justify-between items-center">
+            <h1 class="text-xl font-bold text-sidebar-primary">Rahul Singh</h1>
+            <button id="mobile-menu-btn"
+                class="text-sidebar-foreground p-2 hover:text-sidebar-primary transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <ul id="mobile-menu" class="hidden mt-4 space-y-2">
+            <li>
+                <a href="#home" class="nav-link block py-2" data-section="home">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="nav-link block py-2" data-section="about">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="#skills" class="nav-link block py-2" data-section="skills">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span>Skills</span>
+                </a>
+            </li>
+            <li>
+                <a href="#projects" class="nav-link block py-2" data-section="projects">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                        </path>
+                    </svg>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="#experience" class="nav-link block py-2" data-section="experience">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="#education" class="nav-link block py-2" data-section="education">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                        </path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 14v7m0 0v-7m0 7h6.75M12 21H5.25"></path>
+                    </svg>
+                    <span>Education</span>
+                </a>
+            </li>
+            <li>
+                <a href="#certifications" class="nav-link block py-2" data-section="certifications">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                        </path>
+                    </svg>
+                    <span>Certificates</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="nav-link block py-2" data-section="contact">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="lg:ml-64">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center py-20 px-6">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Content -->
+                    <div>
+                        <p class="text-primary font-semibold tracking-wide mb-4">Hello, I’m</p>
+
+                        <h1 class="text-5xl md:text-7xl font-bold text-foreground leading-tight mb-4">
+                            Rahul Singh<span class="text-primary">.</span>
+                        </h1>
+
+                        <h2 class="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">
+                            AI & Data Science Student
+                            <br>
+                            <span class="text-lg md:text-xl">
+                                MERN Stack • Machine Learning Fundamentals • Hackathon Experience
+                            </span>
+                        </h2>
+                        <p class="text-lg text-muted-foreground max-w-xl leading-relaxed mb-8">
+                            I build practical MERN stack web applications while strengthening my skills in
+                            machine learning and problem-solving through projects and hackathons. Actively
+                            seeking opportunities to apply my knowledge in real-world environments.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mb-8">
+                            <a href="#projects" class="btn-primary">
+                                View Projects
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                            <a href="#contact" class="btn-secondary">Get in Touch</a>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <a href="https://github.com/868Rahul" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="GitHub">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/rahul-singh868" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="LinkedIn">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a href="mailto:9905singhrahul@gmail.com" class="social-link" aria-label="Email">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="hidden lg:block">
+                        <div class="relative">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl transform rotate-6">
+                            </div>
+                            <div
+                                class="relative bg-gradient-to-br from-primary/30 to-secondary/30 rounded-3xl p-8 shadow-2xl">
+                                <div
+                                    class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/40 to-secondary/40 flex items-center justify-center">
+                                    <img src="assets/images/profile1.png" alt="Rahul Singh"
+                                        class="w-full h-full object-cover"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <svg class="w-64 h-64 text-primary/50 hidden" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" style="display: none;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="section-title text-center mb-4">
+                    About <span class="text-primary">Me</span>
+                </h2>
+                <p class="section-subtitle text-center mb-12">Getting to know who I am</p>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <p class="text-lg text-muted-foreground leading-relaxed">
+                            I am an AI & Data Science student at DYPIEMR, Pune, with a strong interest in building
+                            practical, real-world applications. I work with the MERN stack and enjoy developing
+                            complete, functional web projects while gradually integrating data-driven and AI concepts
+                            into my work.
+                        </p>
+                        <p class="text-muted-foreground leading-relaxed italic border-l-4 border-primary pl-4">
+                            "I am driven by curiosity, continuous learning, and problem-solving. Participating in
+                            hackathons has helped me gain experience working under time constraints, collaborating in
+                            teams, and transforming ideas into working prototypes."
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-foreground">What I Bring</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-muted-foreground">Building academic foundation in Data Science,
+                                    focusing on machine learning
+                                    fundamentals and predictive modeling</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-muted-foreground">Hands-on experience with MERN stack development and
+                                    building full-stack applications</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-muted-foreground">Strengthening problem-solving skills with Data
+                                    Structures and Algorithms using Python</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-muted-foreground">Hackathon experience with time-constrained
+                                    development and team collaboration</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-6 bg-muted/30">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-center mb-4">
+                    My <span class="text-primary">Skills</span>
+                </h2>
+                <p class="section-subtitle text-center mb-12">Technologies and tools I work with</p>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="skill-card">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-foreground">Frontend Development</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Javascript</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-foreground">Backend Development</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">mySQL</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">JWT Authentication</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-foreground">AI & Machine Learning</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Exploratory Data Analysis (EDA)</span>
+                            <span class="skill-tag">Data Preprocessing</span>
+                            <span class="skill-tag">Machine Learning Fundamentals</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-foreground">Desktop & Systems Development</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">.NET Framework / .NET</span>
+                            <span class="skill-tag">Desktop Application Development</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-semibold text-foreground">Tools & Workflow</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Postman</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Dynamic) -->
+        <section id="projects" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-center mb-4">
+                    Featured <span class="text-primary">Projects</span>
+                </h2>
+                <p class="section-subtitle text-center mb-12">Some of my recent work</p>
+                <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Projects will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section (Dynamic) -->
+        <section id="experience" class="py-20 px-6 bg-muted/30">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="section-title text-center mb-4">
+                    My <span class="text-primary">Experience</span>
+                </h2>
+                <p class="section-subtitle text-center mb-12">Internships, hackathons, and achievements</p>
+                <div id="experience-container">
+                    <!-- Experience will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section (Dynamic) -->
+        <section id="education" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="section-title text-center mb-4">
+                    My <span class="text-primary">Education</span>
+                </h2>
+                <p class="section-subtitle text-center mb-12">Academic background and achievements</p>
+                <div id="education-container" class="space-y-6">
+                    <!-- Education will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section (Dynamic) -->
+        <section id="certifications" class="py-20 px-6 bg-muted/30">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-center mb-4">
+                    My <span class="text-primary">Certifications</span>
+                </h2>
+                <p class="section-subtitle text-center mb-12">Professional credentials and achievements</p>
+                <div id="certifications-container" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Certifications will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="section-title text-center mb-4">
+                    Get In <span class="text-primary">Touch</span>
+                </h2>
+                <p class="section-subtitle text-center mb-12">
+                    Have a question or want to work together?
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-foreground mb-6">Let's Connect</h3>
+                            <p class="text-muted-foreground mb-8">
+                                I'm always open to discussing new projects, creative ideas, or opportunities to be part
+                                of your visions.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <a href="mailto:9905singhrahul@gmail.com" class="contact-card">
+                                <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-muted-foreground">Email</p>
+                                    <p class="font-medium text-foreground">9905singhrahul@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <a href="https://linkedin.com/in/rahul-singh868" target="_blank" rel="noopener noreferrer"
+                                class="contact-card">
+                                <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-muted-foreground">LinkedIn</p>
+                                    <p class="font-medium text-foreground">linkedin.com/in/rahul-singh868</p>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/868Rahul" target="_blank" rel="noopener noreferrer"
+                                class="contact-card">
+                                <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-muted-foreground">GitHub</p>
+                                    <p class="font-medium text-foreground">github.com/868Rahul</p>
+                                </div>
+                            </a>
+
+                            <div class="contact-card">
+                                <div class="p-3 rounded-lg bg-primary/10 text-primary">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-muted-foreground">Location</p>
+                                    <p class="font-medium text-foreground">Pune, Maharashtra, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="assets/Rahul_Singh_Resume.pdf" target="_blank" rel="noopener noreferrer"
+                            class="btn-primary inline-flex items-center gap-2" download>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <form id="contact-form" class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-foreground mb-2">Your
+                                    Name</label>
+                                <input type="text" id="name" name="name" required class="form-input"
+                                    placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-foreground mb-2">Your
+                                    Email</label>
+                                <input type="email" id="email" name="email" required class="form-input"
+                                    placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label for="message"
+                                    class="block text-sm font-medium text-foreground mb-2">Message</label>
+                                <textarea id="message" name="message" required rows="5" class="form-input resize-none"
+                                    placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 px-6 border-t border-border">
+            <div class="max-w-6xl mx-auto text-center text-muted-foreground text-sm">
+                <p>&copy; 2026 Rahul Singh. All rights reserved.</p>
+                <p class="mt-1">Built with passion and dedication.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Certificate Modal -->
+    <div id="certificate-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <img id="certificate-modal-image" src="" alt="Certificate"
+                class="max-w-full max-h-full object-contain rounded-lg">
+            <button id="certificate-modal-close"
+                class="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/70 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

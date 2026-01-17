@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "institution": "Dr. D.Y. Patil Institute of Engineering, Management and Research, Pune",
+        "course": "Bachelor of Engineering - BE, Artificial Intelligence & Data Science",
+        "year": "2023 - Present",
+        "score": "8.55",
+        "status": "Current",
+        "logo": "assets/images/dyp-logo.jpeg",
+        "color": "purple"
+    },
+    {
+        "id": 2,
+        "institution": "Imperial Public School, Hathwa",
+        "course": "12th CBSE",
+        "year": "Completed",
+        "score": "76.2%",
+        "status": "Completed",
+        "logo": "assets/images/school-logo.png",
+        "color": "blue"
+    },
+    {
+        "id": 3,
+        "institution": "Imperial Public School, Hathwa",
+        "course": "10th CBSE",
+        "year": "Completed",
+        "score": "74.4%",
+        "status": "Completed",
+        "logo": "assets/images/school-logo.png",
+        "color": "blue"
+    }
+]

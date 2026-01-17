@@ -1,0 +1,40 @@
+[
+    {
+        "title": "MediLog",
+        "description": "Medical data platform for simplified patient record management and real-time access to critical information (First Hackathon)",
+        "image": "assets/Projects/medilog.png",
+        "tags": [
+            "MERN Stack",
+            "MongoDB",
+            "Real-time"
+        ],
+        "github": "https://github.com/868Rahul/HM0055_Code200",
+        "demo": null
+    },
+    {
+        "title": "Drone Surveillance System",
+        "description": "AI-powered anomaly detection, face recognition, and real-time monitoring for public & high-security areas (Second Hackathon)",
+        "image": "assets/Projects/drone-surveillance.png",
+        "tags": [
+            ".NET",
+            "AI/ML",
+            "OpenCV",
+            "WebSocket"
+        ],
+        "github": "https://github.com/RohanSali/Drone-Surveillance-System",
+        "demo": null
+    },
+    {
+        "title": "ReelLocal",
+        "description": "MERN platform where shopkeepers submit videos for editors to create reels, with built-in real-time chat after project acceptance",
+        "image": "assets/Projects/reellocal.png",
+        "tags": [
+            "MERN Stack",
+            "Socket.io",
+            "WebSocket",
+            "Real-time"
+        ],
+        "github": "https://github.com/868Rahul/Reel_Local",
+        "demo": null
+    }
+]

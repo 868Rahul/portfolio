@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-showcase-static",
+  "version": "1.0.0",
+  "description": "Static portfolio website with JSON-driven dynamic content",
+  "type": "module",
+  "scripts": {
+    "serve": "npx http-server . -p 8080 -o",
+    "dev": "npx http-server . -p 8080 -o"
+  },
+  "keywords": [
+    "portfolio",
+    "static-site",
+    "html",
+    "javascript"
+  ],
+  "author": "Alex Chen",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

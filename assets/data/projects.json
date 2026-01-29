@@ -1,5 +1,35 @@
 [
     {
+        "title": "Customer Churn Prediction System",
+        "description": "End-to-end machine learning system to predict customer churn using real-world Telco data. Includes data cleaning, feature engineering, pipelines, model comparison, explainable AI, and Streamlit deployment with churn probability and risk level.",
+        "image": "assets/Projects/customer-churn.png",
+        "tags": [
+            "Machine Learning",
+            "Scikit-learn",
+            "Pipelines",
+            "EDA",
+            "Streamlit",
+            "Explainable AI"
+        ],
+        "github": "https://github.com/868Rahul/customer-churn-prediction-ml",
+        "demo": null
+    },
+    {
+        "title": "IPL 50+ Score Prediction System",
+        "description": "End-to-end data analytics to machine learning system to predict whether a batsman will score 50+ runs. Includes EDA, feature engineering, data leakage prevention, Gradient Boosting model, and Streamlit deployment.",
+        "image": "assets/Projects/ipl-50plus.png",
+        "tags": [
+            "Data Science",
+            "EDA",
+            "Machine Learning",
+            "Gradient Boosting",
+            "Scikit-learn",
+            "Streamlit"
+        ],
+        "github": "https://github.com/868Rahul/ipl-50plus-score-prediction",
+        "demo": null
+    },
+    {
         "title": "MediLog",
         "description": "Medical data platform for simplified patient record management and real-time access to critical information (First Hackathon)",
         "image": "assets/Projects/medilog.png",

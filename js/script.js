@@ -10,43 +10,35 @@ function escapeHtml(text) {
 const experiences = [
   {
     id: 1,
-    title: "Software Engineering Intern",
-    company: "TechStart Inc.",
-    period: "Jun 2024 - Aug 2024",
-    description: "Developed and maintained React components for the main product dashboard. Collaborated with senior developers on API integration and implemented unit tests.",
-    type: "internship"
+    title: "Machine Learning Projects",
+    company: "Academic & Self Projects",
+    period: "2025 - Present",
+    description: "Built end-to-end ML projects including Customer Churn Prediction and IPL 50+ Score Prediction. Worked on data cleaning, EDA, feature engineering, model training, evaluation, and Streamlit deployment.",
+    type: "experience"
   },
   {
     id: 2,
-    title: "HackTech 2024 - 2nd Place",
-    company: "University Hackathon",
-    period: "Mar 2024",
-    description: "Built an AI-powered accessibility tool for visually impaired users in 36 hours. Implemented voice navigation and screen reader optimization.",
+    title: "Inno-Hackathon VIT 2025 (Round 2 Qualifier)",
+    company: "VIT University",
+    period: "2025",
+    description: "Developed an AI-based drone surveillance system for anomaly, fire, and flood detection using ML, FastAPI, and PyBullet.",
     type: "hackathon"
   },
   {
     id: 3,
-    title: "Open Source Contributor",
-    company: "React Community",
-    period: "Jan 2024 - Present",
-    description: "Active contributor to open-source React projects. Submitted 15+ pull requests with bug fixes and feature enhancements.",
-    type: "experience"
+    title: "Smart India Hackathon (Internal Round)",
+    company: "SIH",
+    period: "2025",
+    description: "Selected at college level for AI-based drone surveillance project (VIRA) and worked on solution design and ML approach.",
+    type: "hackathon"
   },
   {
     id: 4,
-    title: "AI/ML Research Assistant",
-    company: "University AI Lab",
-    period: "Sep 2023 - Dec 2023",
-    description: "Assisted in research on natural language processing models. Prepared datasets and ran experiments for sentiment analysis projects.",
-    type: "internship"
-  },
-  {
-    id: 5,
-    title: "CodeJam 2023 - Finalist",
-    company: "Google Developer Group",
-    period: "Nov 2023",
-    description: "Reached finals in competitive programming competition. Solved algorithmic challenges under time pressure.",
-    type: "hackathon"
+    title: "Full-Stack Projects",
+    company: "Academic & Personal",
+    period: "2024 - Present",
+    description: "Built projects like MediLog and ReelLocal using React, Node.js, MongoDB, Firebase, and REST APIs.",
+    type: "experience"
   }
 ];
 

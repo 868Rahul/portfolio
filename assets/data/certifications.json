@@ -1,32 +1,11 @@
 [
   {
-    "title": "Fundamentals of MERN Stack",
-    "issuer": "Simplilearn SkillUp",
-    "date": "22 December 2024",
-    "image": "assets/certificates/Fullstack.png",
-    "credentialId": "Certificate No. 825471",
-    "verifyLink": ""
-  },
-  {
-    "title": "ARTIMAS 2025 – HackMatrix Hackathon (Finalist)",
-    "issuer": "Pimpri Chinchwad College of Engineering (PCCOE)",
-    "date": "March 2025",
-    "image": "assets/certificates/PCCOE.jpeg",
-    "credentialId": "Certificate of Participation"
-  },
-  {
-    "title": "Python: From Zero to Hero – Code Your Way to the Top",
-    "issuer": "Udemy",
-    "date": "12 July 2025",
-    "image": "assets/certificates/python.jpeg",
-    "credentialId": "UC-37adb6f2-055c-48c4-ba7e-5842c26e112b"
-  },
-  {
-    "title": "The Complete MySQL Bootcamp: Go from Beginner to Expert",
-    "issuer": "Udemy",
-    "date": "17 July 2025",
-    "image": "assets/certificates/MySql.jpeg",
-    "credentialId": "UC-05273bf0-ac55-42b8-9c90-142ef595d7c2"
+    "title": "Complete Data Science, Machine Learning, Deep Learning, NLP Bootcamp",
+    "issuer": "Udemy (KRISHAI Technologies Private Limited, Krish Naik)",
+    "date": "25 March 2026",
+    "image": "assets/certificates/datascience_bootcamp.png",
+    "credentialId": "UC-4d0ae1ee-b2a8-4183-9292-981af13cfdc2",
+    "verifyLink": "https://ude.my/UC-4d0ae1ee-b2a8-4183-9292-981af13cfdc2"
   },
   {
     "title": "Internal Hackathon 2025 – TechCombat 4.0",
@@ -37,11 +16,40 @@
     "verifyLink": ""
   },
   {
+    "title": "The Complete MySQL Bootcamp: Go from Beginner to Expert",
+    "issuer": "Udemy",
+    "date": "17 July 2025",
+    "image": "assets/certificates/MySql.jpeg",
+    "credentialId": "UC-05273bf0-ac55-42b8-9c90-142ef595d7c2"
+  },
+  {
+    "title": "Python: From Zero to Hero – Code Your Way to the Top",
+    "issuer": "Udemy",
+    "date": "12 July 2025",
+    "image": "assets/certificates/python.jpeg",
+    "credentialId": "UC-37adb6f2-055c-48c4-ba7e-5842c26e112b"
+  },
+  {
+    "title": "ARTIMAS 2025 – HackMatrix Hackathon (Finalist)",
+    "issuer": "Pimpri Chinchwad College of Engineering (PCCOE)",
+    "date": "March 2025",
+    "image": "assets/certificates/PCCOE.jpeg",
+    "credentialId": "Certificate of Participation"
+  },
+  {
     "title": "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
     "issuer": "Oracle",
     "date": "2025-2027",
     "image": "assets/certificates/oracle-gen-ai.png",
     "credentialId": "Certified",
     "verifyLink": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=0D7F2F773FD36F6831A2BC8304D8D8390D58110A998E3B16BE761DA8DE60DD9B"
+  },
+  {
+    "title": "Fundamentals of MERN Stack",
+    "issuer": "Simplilearn SkillUp",
+    "date": "22 December 2024",
+    "image": "assets/certificates/Fullstack.png",
+    "credentialId": "Certificate No. 825471",
+    "verifyLink": ""
   }
 ]

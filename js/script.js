@@ -10,34 +10,26 @@ function escapeHtml(text) {
 const experiences = [
   {
     id: 1,
-    title: "Machine Learning Projects",
-    company: "Academic & Self Projects",
-    period: "2025 - Present",
-    description: "Built end-to-end ML projects including Customer Churn Prediction and IPL 50+ Score Prediction. Worked on data cleaning, EDA, feature engineering, model training, evaluation, and Streamlit deployment.",
+    title: "Machine Learning Intern",
+    company: "CodeAlpha",
+    period: "Jan 2025 - Feb 2025",
+    description: "Completed a 1-month ML internship, developing Credit Scoring and Breast Cancer Prediction models using real-world datasets. Applied data preprocessing, feature engineering, and trained models like Logistic Regression, Random Forest, and SVM, achieving high accuracy (~98%) and strong ROC-AUC. Gained hands-on experience in the ML lifecycle, from data cleaning to model evaluation, and contributed to improving model performance through hyperparameter tuning and feature selection.",
     type: "experience"
   },
   {
     id: 2,
-    title: "Inno-Hackathon VIT 2025 (Round 2 Qualifier)",
-    company: "VIT University",
+    title: "AI-Based Drone Surveillance System (Hackathon Project)",
+    company: "Smart India Hackathon & Inno-Hackathon VIT",
     period: "2025",
-    description: "Developed an AI-based drone surveillance system for anomaly, fire, and flood detection using ML, FastAPI, and PyBullet.",
+    description: "Developed an AI-based drone surveillance system for anomaly detection (fire and flood scenarios). Designed a real-time analytics pipeline using FastAPI and simulation tools. Selected in the Smart India Hackathon (college round) and qualified Top 120 teams in Inno-Hackathon VIT 2025, demonstrating strong real-world applicability.",
     type: "hackathon"
   },
   {
     id: 3,
-    title: "Smart India Hackathon (Internal Round)",
-    company: "SIH",
-    period: "2025",
-    description: "Selected at college level for AI-based drone surveillance project (VIRA) and worked on solution design and ML approach.",
-    type: "hackathon"
-  },
-  {
-    id: 4,
-    title: "Full-Stack Projects",
+    title: "Full Stack Developer (Supporting Role)",
     company: "Academic & Personal",
     period: "2024 - Present",
-    description: "Built projects like MediLog and ReelLocal using React, Node.js, MongoDB, Firebase, and REST APIs.",
+    description: "Built web applications such as MediLog and ReelLocal using React, Node.js, MongoDB, and Firebase. Developed REST APIs and integrated backend systems to support AI-based features.",
     type: "experience"
   }
 ];
@@ -367,9 +359,9 @@ function loadExperience() {
     return `
             <div class="relative flex flex-col md:flex-row items-start gap-4 ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}">
               <div class="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full md:-translate-x-1/2 ring-4 ring-background z-10"></div>
-              <div class="ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${isEven ? 'md:pr-8 md:text-right' : 'md:pl-8'}">
-                <div class="experience-card">
-                  <div class="flex items-center gap-2 mb-2 ${isEven ? 'md:justify-end' : ''}">
+              <div class="ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${isEven ? 'md:pr-8' : 'md:pl-8'}">
+                <div class="experience-card text-left">
+                  <div class="flex items-center gap-2 mb-2">
                     <span class="px-2 py-1 text-xs font-medium rounded-full border ${typeColors[exp.type]}">
                       ${typeIcons[exp.type]}
                       ${exp.type.charAt(0).toUpperCase() + exp.type.slice(1)}
@@ -378,7 +370,7 @@ function loadExperience() {
                   <h3 class="font-bold text-foreground text-lg">${escapeHtml(exp.title)}</h3>
                   <p class="text-primary font-medium text-sm">${escapeHtml(exp.company)}</p>
                   <p class="text-muted-foreground text-sm mb-3">${escapeHtml(exp.period)}</p>
-                  <p class="text-muted-foreground text-sm">${escapeHtml(exp.description)}</p>
+                  <p class="text-muted-foreground text-sm break-words">${escapeHtml(exp.description)}</p>
                 </div>
               </div>
               <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>
@@ -625,4 +617,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-

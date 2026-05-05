@@ -20,14 +20,16 @@
     "issuer": "Udemy",
     "date": "17 July 2025",
     "image": "assets/certificates/MySql.jpeg",
-    "credentialId": "UC-05273bf0-ac55-42b8-9c90-142ef595d7c2"
+    "credentialId": "UC-05273bf0-ac55-42b8-9c90-142ef595d7c2",
+    "verifyLink": "https://www.udemy.com/certificate/UC-05273bf0-ac55-42b8-9c90-142ef595d7c2/"
   },
   {
     "title": "Python: From Zero to Hero – Code Your Way to the Top",
     "issuer": "Udemy",
     "date": "12 July 2025",
     "image": "assets/certificates/python.jpeg",
-    "credentialId": "UC-37adb6f2-055c-48c4-ba7e-5842c26e112b"
+    "credentialId": "UC-37adb6f2-055c-48c4-ba7e-5842c26e112b",
+    "verifyLink": "https://www.udemy.com/certificate/UC-37adb6f2-055c-48c4-ba7e-5842c26e112b/"
   },
   {
     "title": "ARTIMAS 2025 – HackMatrix Hackathon (Finalist)",

@@ -10,28 +10,20 @@ function escapeHtml(text) {
 const experiences = [
   {
     id: 1,
-    title: "Machine Learning Intern",
-    company: "CodeAlpha",
-    period: "Jan 2025 - Feb 2025",
-    description: "Completed a 1-month ML internship, developing Credit Scoring and Breast Cancer Prediction models using real-world datasets. Applied data preprocessing, feature engineering, and trained models like Logistic Regression, Random Forest, and SVM, achieving high accuracy (~98%) and strong ROC-AUC. Gained hands-on experience in the ML lifecycle, from data cleaning to model evaluation, and contributed to improving model performance through hyperparameter tuning and feature selection.",
+    title: "Python with Machine Learning Intern",
+    company: "RVNS Solutions Private Limited",
+    period: "Feb 2026 - May 2026",
+    description: "Completed a 3-month internship focused on Python programming, data analysis, visualization, and Machine Learning concepts. Worked with libraries such as NumPy, Pandas, Matplotlib, and Seaborn for data preprocessing and analysis. Implemented supervised and unsupervised learning algorithms including Linear Regression, Logistic Regression, KNN, Decision Trees, Random Forest, and K-Means Clustering. Built mini ML projects, performed model evaluation, and gained practical exposure to real-world machine learning workflows and end-to-end project development.",
     type: "experience"
   },
   {
     id: 2,
-    title: "AI-Based Drone Surveillance System (Hackathon Project)",
-    company: "Smart India Hackathon & Inno-Hackathon VIT",
-    period: "2025",
-    description: "Developed an AI-based drone surveillance system for anomaly detection (fire and flood scenarios). Designed a real-time analytics pipeline using FastAPI and simulation tools. Selected in the Smart India Hackathon (college round) and qualified Top 120 teams in Inno-Hackathon VIT 2025, demonstrating strong real-world applicability.",
-    type: "hackathon"
-  },
-  {
-    id: 3,
-    title: "Full Stack Developer (Supporting Role)",
-    company: "Academic & Personal",
-    period: "2024 - Present",
-    description: "Built web applications such as MediLog and ReelLocal using React, Node.js, MongoDB, and Firebase. Developed REST APIs and integrated backend systems to support AI-based features.",
+    title: "Machine Learning Intern",
+    company: "CodeAlpha",
+    period: "Jan 2026 - Feb 2026",
+    description: "Completed a Machine Learning internship focused on developing predictive analytics models for real-world problems including Credit Risk Prediction, Customer Churn Prediction, and Breast Cancer Classification. Applied data preprocessing, feature engineering, and trained models such as Logistic Regression, Random Forest, and Support Vector Machine (SVM). Achieved high model performance with strong Accuracy, F1-score, and ROC-AUC metrics while gaining practical experience in model evaluation, hyperparameter tuning, and ML workflows.",
     type: "experience"
-  }
+  },
 ];
 
 // Load Projects

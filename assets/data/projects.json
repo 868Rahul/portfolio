@@ -1,8 +1,25 @@
 [
     {
+        "title": "AI-Based Oral Health Analysis System",
+        "description": "Full-stack AI healthcare system for detecting and analyzing 5 oral diseases using a custom-trained YOLOv8 model. Features real-time image analysis, Flask AI inference API, authentication system, prediction history dashboard, MongoDB integration, and cloud deployment using Vercel, Render, and Hugging Face Spaces.",
+        "image": "assets/Projects/oral-ai.png",
+        "tags": [
+            "YOLOv8",
+            "Computer Vision",
+            "Deep Learning",
+            "React.js",
+            "Node.js",
+            "Flask API",
+            "MongoDB",
+            "OpenCV"
+        ],
+        "github": "https://github.com/868Rahul/AI-Based-Oral-Health-Analysis-System-YOLOv8-",
+        "demo": "https://ai-based-oral-health-analysis-syste.vercel.app/dashboard"
+    },
+    {
         "title": "Customer Churn Prediction System",
         "description": "End-to-end machine learning system to predict customer churn using real-world Telco data. Includes data cleaning, feature engineering, pipelines, model comparison, explainable AI, and Streamlit deployment with churn probability and risk level.",
-        "image": "assets/Projects/customer-churn.png",
+        "image": "assets/projects/customer.png",
         "tags": [
             "Machine Learning",
             "Scikit-learn",
@@ -52,7 +69,7 @@
             "WebSocket"
         ],
         "github": "https://github.com/RohanSali/Drone-Surveillance-System",
-        "demo": null
+        "demo": "https://aadim112.github.io/HM0055_Code200/"
     },
     {
         "title": "ReelLocal",
@@ -65,6 +82,6 @@
             "Real-time"
         ],
         "github": "https://github.com/868Rahul/Reel_Local",
-        "demo": null
+        "demo": "https://reel-local.vercel.app/"
     }
 ]

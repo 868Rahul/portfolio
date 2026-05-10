@@ -13,7 +13,13 @@ const experiences = [
     title: "Python with Machine Learning Intern",
     company: "RVNS Solutions Private Limited",
     period: "Feb 2026 - May 2026",
-    description: "Completed a 3-month internship focused on Python programming, data analysis, visualization, and Machine Learning concepts. Worked with libraries such as NumPy, Pandas, Matplotlib, and Seaborn for data preprocessing and analysis. Implemented supervised and unsupervised learning algorithms including Linear Regression, Logistic Regression, KNN, Decision Trees, Random Forest, and K-Means Clustering. Built mini ML projects, performed model evaluation, and gained practical exposure to real-world machine learning workflows and end-to-end project development.",
+    description: [
+        "Completed a 3-month internship focused on Python programming, data analysis, visualization, and Machine Learning concepts.",
+        "Worked with NumPy, Pandas, Matplotlib, and Seaborn for data preprocessing and analysis.",
+        "Implemented supervised and unsupervised learning algorithms including Linear Regression, Logistic Regression, KNN, Decision Trees, Random Forest, and K-Means Clustering.",
+        "Built mini machine learning projects and performed model evaluation and optimization.",
+        "Gained practical exposure to real-world machine learning workflows and end-to-end project development."
+    ],
     type: "experience"
   },
   {
@@ -21,7 +27,13 @@ const experiences = [
     title: "Machine Learning Intern",
     company: "CodeAlpha",
     period: "Jan 2026 - Feb 2026",
-    description: "Completed a Machine Learning internship focused on developing predictive analytics models for real-world problems including Credit Risk Prediction, Customer Churn Prediction, and Breast Cancer Classification. Applied data preprocessing, feature engineering, and trained models such as Logistic Regression, Random Forest, and Support Vector Machine (SVM). Achieved high model performance with strong Accuracy, F1-score, and ROC-AUC metrics while gaining practical experience in model evaluation, hyperparameter tuning, and ML workflows.",
+    description: [
+        "Developed predictive analytics models for real-world problems including Credit Risk Prediction, Customer Churn Prediction, and Breast Cancer Classification.",
+        "Applied comprehensive data preprocessing and feature engineering techniques to enhance model accuracy.",
+        "Trained and optimized various algorithms such as Logistic Regression, Random Forest, and Support Vector Machine (SVM).",
+        "Achieved high performance benchmarks across key metrics including Accuracy, F1-score, and ROC-AUC.",
+        "Gained hands-on experience in end-to-end ML workflows, including model evaluation and hyperparameter tuning."
+    ],
     type: "experience"
   },
 ];
@@ -349,8 +361,23 @@ function loadExperience() {
                   </div>
                   <h3 class="font-bold text-foreground text-lg">${escapeHtml(exp.title)}</h3>
                   <p class="text-primary font-medium text-sm">${escapeHtml(exp.company)}</p>
-                  <p class="text-muted-foreground text-sm mb-3">${escapeHtml(exp.period)}</p>
-                  <p class="text-muted-foreground text-sm break-words">${escapeHtml(exp.description)}</p>
+                  <p class="text-muted-foreground text-sm mb-3 font-semibold">${escapeHtml(exp.period)}</p>
+                  <div class="text-muted-foreground text-sm">
+                    ${Array.isArray(exp.description) ? `
+                      <ul class="space-y-2 list-none">
+                        ${exp.description.map(point => `
+                          <li class="flex items-start gap-2">
+                            <span class="text-primary mt-1 flex-shrink-0">
+                              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="4" />
+                              </svg>
+                            </span>
+                            <span>${escapeHtml(point)}</span>
+                          </li>
+                        `).join('')}
+                      </ul>
+                    ` : `<p class="break-words">${escapeHtml(exp.description)}</p>`}
+                  </div>
                 </div>
               </div>
               <div class="hidden md:block md:w-[calc(50%-2rem)]"></div>

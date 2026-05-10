@@ -19,7 +19,7 @@
     {
         "title": "Customer Churn Prediction System",
         "description": "End-to-end machine learning system to predict customer churn using real-world Telco data. Includes data cleaning, feature engineering, pipelines, model comparison, explainable AI, and Streamlit deployment with churn probability and risk level.",
-        "image": "assets/projects/customer.png",
+        "image": "assets/projects/customer_churn.png",
         "tags": [
             "Machine Learning",
             "Scikit-learn",

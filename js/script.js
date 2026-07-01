@@ -180,7 +180,7 @@ async function loadCertifications() {
             </h3>
             <p class="text-sm text-muted-foreground mb-1">${escapeHtml(issuer)}</p>
             <p class="text-xs text-muted-foreground mb-1">${escapeHtml(date)}</p>
-            ${credentialId ? `<p class="text-xs text-muted-foreground/70 mb-4">${escapeHtml(credentialId)}</p>` : '<p class="text-xs text-muted-foreground/70 mb-4"></p>'}
+            ${credentialId ? `<p class="text-xs text-muted-foreground/70 mb-4 break-words certification-credential-id">${escapeHtml(credentialId)}</p>` : '<p class="text-xs text-muted-foreground/70 mb-4 certification-credential-id"></p>'}
         </div>
         ${verifyLink && verifyLink !== '' && verifyLink !== '#' ? `
           <a href="${escapeHtml(verifyLink)}" target="_blank" rel="noopener noreferrer" 

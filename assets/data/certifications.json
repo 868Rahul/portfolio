@@ -53,5 +53,13 @@
     "image": "assets/certificates/Fullstack.png",
     "credentialId": "Certificate No. 825471",
     "verifyLink": ""
+  },
+  {
+  "title": "Career Essentials in Generative AI by Microsoft and LinkedIn",
+  "issuer": "Microsoft & LinkedIn Learning",
+  "date": "18 October 2024",
+  "image": "assets/certificates/gen_ai.png",
+  "credentialId": "72c77fb80bd8aced0b34c3acf71299a53cc80960de98da19a714253c4f6cf97a",
+  "verifyLink": "https://www.linkedin.com/learning/certificates/72c77fb80bd8aced0b34c3acf71299a53cc80960de98da19a714253c4f6cf97a?trk=share_certificate"
   }
 ]

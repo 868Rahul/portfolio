@@ -311,6 +311,12 @@ h6 {
   transform: translateY(-4px);
 }
 
+.certification-credential-id {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
 /* Image container in certification card - clickable */
 .certification-card div[class*="aspect-video"] {
   position: relative;

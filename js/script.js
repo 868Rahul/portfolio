@@ -10,7 +10,7 @@ function escapeHtml(text) {
 const experiences = [
   {
     id: 1,
-    title: "Python with Machine Learning Intern",
+    title: "Machine Learning Intern",
     company: "RVNS Solutions Private Limited",
     period: "Feb 2026 - May 2026",
     description: [

@@ -6,6 +6,24 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+// Show helpful message when files are opened via file:// (fetch to local files will fail)
+function showLocalServerWarning(container) {
+  if (!container) return;
+  if (location.protocol === 'file:') {
+    container.innerHTML = `
+      <p class="text-muted-foreground text-center py-8">
+        Data cannot be loaded when opening the page directly from the file system.
+        Please serve this folder with a local web server, for example:
+        <div class="mt-2">
+          <code>npm run serve</code> or <code>npx http-server . -p 8080</code> or
+          <code>python -m http.server 8080</code>
+        </div>
+      </p>`;
+    return true;
+  }
+  return false;
+}
+
 // Experience data (hardcoded since not in JSON structure)
 const experiences = [
   {
@@ -124,8 +142,11 @@ async function loadProjects() {
     }).join('');
   } catch (error) {
     const container = document.getElementById('projects-container');
+    console.error('Error loading projects:', error);
     if (container) {
-      container.innerHTML = '<p class="text-muted-foreground text-center py-8">Failed to load projects. Please try again later.</p>';
+      if (!showLocalServerWarning(container)) {
+        container.innerHTML = '<p class="text-muted-foreground text-center py-8">Failed to load projects. Please try again later.</p>';
+      }
     }
   }
 }
@@ -234,8 +255,112 @@ async function loadCertifications() {
     });
   } catch (error) {
     const container = document.getElementById('certifications-container');
+    console.error('Error loading certifications:', error);
     if (container) {
-      container.innerHTML = '<p class="text-muted-foreground text-center py-8">Failed to load certifications. Please try again later.</p>';
+      if (!showLocalServerWarning(container)) {
+        container.innerHTML = '<p class="text-muted-foreground text-center py-8">Failed to load certifications. Please try again later.</p>';
+      }
+    }
+  }
+}
+
+// Load Achievements
+async function loadAchievements() {
+  try {
+    const response = await fetch('assets/data/achievements.json');
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    const achievements = await response.json();
+    const container = document.getElementById('achievements-container');
+    if (!container) return;
+    if (!Array.isArray(achievements)) throw new Error('Achievements data is not an array');
+
+    container.innerHTML = achievements.map(a => {
+      const images = Array.isArray(a.images) ? a.images : [];
+      const image = images.length && images[0] ? images[0] : '';
+      const initialsSource = a.issuer || a.title || '';
+      const initials = initialsSource.split(' ').filter(Boolean).slice(0,2).map(s => s[0].toUpperCase()).join('');
+
+      // If no image is provided, omit the top thumbnail area and render a compact text card
+      const thumbHtml = image ? `
+        <div class="thumb">
+          <img src="${escapeHtml(image)}" alt="${escapeHtml(a.title)}" onerror="this.style.display='none'; this.parentElement.style.display='none'">
+        </div>
+      ` : '';
+
+      return `
+      <article class="achievement-card" data-id="${escapeHtml(a.id)}" data-images='${escapeHtml(JSON.stringify(images))}'>
+        ${thumbHtml}
+        <div class="p-4">
+          <h3 class="font-bold text-foreground mb-1">${escapeHtml(a.title)}</h3>
+          <p class="text-sm text-muted-foreground mb-2">${escapeHtml(a.issuer)} · ${escapeHtml(a.date)} · ${escapeHtml(a.location || '')}</p>
+          <p class="text-sm text-muted-foreground mb-3">${escapeHtml(a.short)}</p>
+          <div class="flex flex-wrap gap-2">
+            ${(Array.isArray(a.tags) ? a.tags : []).map(t => `<span class="project-tag">${escapeHtml(t)}</span>`).join('')}
+          </div>
+        </div>
+      </article>
+    `;
+    }).join('');
+
+    // Add click handlers to open modal
+    container.querySelectorAll('.achievement-card').forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', (e) => {
+        const dataImages = card.getAttribute('data-images');
+        const images = dataImages ? JSON.parse(dataImages) : [];
+        const id = card.getAttribute('data-id');
+        const achievement = achievements.find(x => x.id === id) || {};
+
+        const modal = document.getElementById('achievement-modal');
+        const content = document.getElementById('achievement-modal-content');
+        if (modal && content) {
+          // Build modal content
+          content.innerHTML = `
+            <h3 class="text-2xl font-bold mb-2">${escapeHtml(achievement.title || '')}</h3>
+            <p class="text-sm text-muted-foreground mb-3">${escapeHtml(achievement.issuer || '')} · ${escapeHtml(achievement.date || '')} · ${escapeHtml(achievement.location || '')}</p>
+            <p class="text-sm text-muted-foreground mb-4">${escapeHtml(achievement.short || '')}</p>
+            <div class="gallery">
+              ${images.map(img => `<img src="${escapeHtml(img)}" alt="${escapeHtml(achievement.title||'image')}" onerror="this.style.display='none'">`).join('')}
+            </div>
+          `;
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
+
+    // Modal close handlers
+    const modal = document.getElementById('achievement-modal');
+    const closeBtn = document.getElementById('achievement-modal-close');
+    if (modal && closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+  } catch (error) {
+    const container = document.getElementById('achievements-container');
+    console.error('Error loading achievements:', error);
+    if (container) {
+      if (!showLocalServerWarning(container)) {
+        container.innerHTML = '<p class="text-muted-foreground text-center py-8">Failed to load achievements. Please try again later.</p>';
+      }
     }
   }
 }
@@ -319,8 +444,11 @@ async function loadEducation() {
     container.innerHTML = educationHTML;
   } catch (error) {
     const container = document.getElementById('education-container');
+    console.error('Error loading education:', error);
     if (container) {
-      container.innerHTML = '<p class="text-muted-foreground text-center py-8">Failed to load education. Please try again later.</p>';
+      if (!showLocalServerWarning(container)) {
+        container.innerHTML = '<p class="text-muted-foreground text-center py-8">Failed to load education. Please try again later.</p>';
+      }
     }
   }
 }
@@ -591,6 +719,7 @@ function initContactForm() {
 document.addEventListener('DOMContentLoaded', () => {
   loadProjects();
   loadCertifications();
+  loadAchievements();
   loadEducation();
   loadExperience();
   initNavigation();

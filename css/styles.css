@@ -273,7 +273,7 @@ h6 {
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   transition: var(--transition-smooth);
-  border: 1px solid hsl(var(--border) / 0.5);
+  border: 1px solid hsl(var(--border) / 0.85);
 }
 
 .project-card:hover {
@@ -794,3 +794,98 @@ h6 {
     transform: scale(1);
   }
 }
+
+/* Achievements card styles */
+.achievement-card {
+  background: hsl(var(--card));
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 210, 60, 0.12);
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(255, 210, 60, 0.15);
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+@media (min-width: 1024px) {
+  .achievement-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.achievement-card:hover {
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12), 0 0 30px rgba(255, 210, 60, 0.18);
+  transform: translateY(-4px);
+  border-color: rgba(255, 210, 60, 0.3);
+}
+
+.achievement-card .thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .achievement-card .thumb {
+    width: 40%;
+    aspect-ratio: auto;
+  }
+}
+
+.achievement-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.achievement-card > .p-4 {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.achievement-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.achievement-card p {
+  margin-bottom: 0.75rem;
+}
+
+.achievement-card .project-tag {
+  background: rgba(255, 210, 60, 0.15);
+  color: hsl(var(--foreground));
+}
+
+/* Achievements modal styles */
+#achievement-modal {
+  backdrop-filter: blur(6px);
+}
+
+#achievement-modal .gallery {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  #achievement-modal .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#achievement-modal img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+#achievement-modal-content h3 { margin-top: 0; }

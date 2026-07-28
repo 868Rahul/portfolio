@@ -163,6 +163,14 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#achievements" class="nav-link" data-section="achievements">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M12 2v6m6 2h4l-2 6h-4l-2 6H10l-2-6H4l-2-6h4V8"></path>
+                        </svg>
+                        <span>Achievements</span>
+                    </a>
+                </li>
+                <li>
                     <a href="#contact" class="nav-link" data-section="contact">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -539,8 +547,7 @@
                             <span class="skill-tag">Fine-tuning (LoRA/QLoRA)</span>
                             <span class="skill-tag">LLM Evaluation (RAGAS)</span>
                             <span class="skill-tag">vLLM / Ollama</span>
-                            <span class="skill-tag">MLflow</span>
-                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">MLflow</span>                            
                         </div>
                     </div>
 
@@ -604,6 +611,21 @@
                 <p class="section-subtitle text-center mb-12">Professional credentials and achievements</p>
                 <div id="certifications-container" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Certifications loaded dynamically via script.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════
+             ACHIEVEMENTS SECTION — DYNAMIC
+        ════════════════════════════════════════════ -->
+        <section id="achievements" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="section-title text-center mb-4">
+                    My <span class="text-primary">Achievements</span>
+                </h2>
+                <p class="section-subtitle text-center mb-12">Recognitions across competitions, institutions, and domains</p>
+                <div id="achievements-container" class="grid sm:grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Achievements loaded dynamically via js/script.js -->
                 </div>
             </div>
         </section>
@@ -743,6 +765,20 @@
                     </path>
                 </svg>
             </button>
+        </div>
+    </div>
+
+    <!-- Achievements Modal -->
+    <div id="achievement-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-3xl max-h-full w-full bg-card rounded-lg p-6 overflow-auto">
+            <button id="achievement-modal-close" class="absolute top-4 right-4 text-foreground bg-black/10 rounded-full p-2 hover:bg-black/20 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div id="achievement-modal-content">
+                <!-- Populated dynamically -->
+            </div>
         </div>
     </div>
 

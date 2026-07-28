@@ -62,21 +62,5 @@
     "image": "assets/certificates/Fullstack.png",
     "credentialId": "Certificate No. 825471",
     "verifyLink": ""
-  },
-  {
-    "title": "ARTIMAS 2025 – HackMatrix Hackathon (Finalist)",
-    "issuer": "Pimpri Chinchwad College of Engineering (PCCOE)",
-    "date": "March 2025",
-    "image": "assets/certificates/PCCOE.jpeg",
-    "credentialId": "Certificate of Participation",
-    "verifyLink": ""
-  },
-  {
-    "title": "Internal Hackathon 2025 – TechCombat 4.0",
-    "issuer": "Dr. D. Y. Patil Institute of Engineering, Management and Research",
-    "date": "September 2025",
-    "image": "assets/certificates/Techcombat.png",
-    "credentialId": "Participation Certificate",
-    "verifyLink": ""
   }
 ]

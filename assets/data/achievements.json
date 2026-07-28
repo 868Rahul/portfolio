@@ -1,0 +1,47 @@
+[
+    {
+      "id": "artimas-2025",
+      "title": "HackMatrix 2025 Finalist",
+      "issuer": "AiMSA & GeeksforGeeks Student Chapter, PCCOE",
+      "date": "Mar 2025",
+      "location": "PCCOE, Pune",
+      "short": "Participated in my first-ever 24-hour hackathon (HackMatrix) during ARTIMAS 2025 and was selected as a finalist. Gained hands-on experience in team collaboration, rapid problem-solving, and hackathon development.",
+      "tags": ["Hackathon","Participant","24-Hour Hackathon", "ARTIMAS"]
+    },
+    {
+      "id": "pbl-2025",
+      "title": "Won PBL 2025 Competition",
+      "issuer": "DYPIEMR",
+      "date": "Apr 2025",
+      "location": "DYPIEMR, Akurdi",
+      "short": "Won the department-level Project-Based Learning (PBL) competition, outperforming 35+ teams.",
+      "tags": ["PBL", "Participant", "Project"]
+    },
+    {
+      "id": "innohack-2025",
+      "title": "InnoHack 2.0 VIT",
+      "issuer": "VIT Pune",
+      "date": "Aug 2025",
+      "location": "VIT, Pune",
+      "short": "Participated in the 24-hour VIT InnoHack hackathon, gaining hands-on experience in rapid problem-solving and collaborative software development.",
+      "tags": ["Hackathon", "Participant"]
+    },
+    {
+      "id": "avishkar-2025",
+      "title": "Avishkar 2025 Hackathon",
+      "issuer": "IQAC - SPPU",
+      "date": "Oct 2025",
+      "location": "DYPACSC, Akurdi",
+      "short": "Won the college-level Avishkar 2025 hackathon and qualified for the zonal round.",
+      "tags": ["Hackathon", "Winner", "Zonal"]
+    },
+    {
+      "id": "codeapex-2026",
+      "title": "VIT CodeApex 2026",
+      "issuer": "VIT Pune",
+      "date": "Mar 2026",
+      "location": "VIT, Pune",
+      "short": "Participated in the 24-hour VIT CodeApex hackathon and developed the AI-powered surveillance project 'VIRA'.",
+      "tags": ["Hackathon", "Participant", "VIRA"]
+    }
+]

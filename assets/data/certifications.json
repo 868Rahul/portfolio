@@ -1,4 +1,13 @@
 [
+
+  {
+  "title": "Agentic AI Certified Foundations Associate",
+  "issuer": "Oracle",
+  "date": "07 August 2026",
+  "image": "assets/certificates/oracle_agentic_ai.png",
+  "credentialId": "102455730AAI26OFA",
+  "verifyLink": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=618DC2641D995BF47789664F12D65C7EC3E4B5A032A48FC027D471912710DD4B"
+  },
   {
     "title": "Complete Data Science, Machine Learning, Deep Learning, NLP Bootcamp",
     "issuer": "Udemy (KRISHAI Technologies Private Limited, Krish Naik)",

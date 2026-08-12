@@ -1,5 +1,22 @@
 [
     {
+        "title": "AgentVerse",
+        "description": "Full-stack AI code review system built with LangGraph, FastAPI, Next.js, and RAG. Features a multi-agent supervisor system, streaming chat interface using SSE, ChromaDB-based knowledge retrieval, locally hosted bge-m3 embeddings, custom tool invocation, and persistent chat history.",
+        "image": "assets/Projects/Agentverse.png",
+        "tags": [
+            "LangGraph",
+            "Generative AI",
+            "RAG",
+            "FastAPI",
+            "Next.js",
+            "ChromaDB",
+            "bge-m3",
+            "Multi-Agent AI"
+        ],
+        "github": "https://github.com/868Rahul/AgentVerse",
+        "demo": null
+    },
+    {
         "title": "AI-Based Oral Health Analysis System",
         "description": "Full-stack AI healthcare system for detecting and analyzing 5 oral diseases using a custom-trained YOLOv8 model. Features real-time image analysis, Flask AI inference API, authentication system, prediction history dashboard, MongoDB integration, and cloud deployment using Vercel, Render, and Hugging Face Spaces.",
         "image": "assets/Projects/oral-ai.png",
@@ -19,7 +36,7 @@
     {
         "title": "Customer Churn Prediction System",
         "description": "End-to-end machine learning system to predict customer churn using real-world Telco data. Includes data cleaning, feature engineering, pipelines, model comparison, explainable AI, and Streamlit deployment with churn probability and risk level.",
-        "image": "assets/projects/customer_churn.png",
+        "image": "assets/Projects/customer-churn.png",
         "tags": [
             "Machine Learning",
             "Scikit-learn",

@@ -21,7 +21,7 @@
     "issuer": "Oracle",
     "date": "2025-2027",
     "image": "assets/certificates/oracle-gen-ai.png",
-    "credentialId": "Certified",
+    "credentialId": "",
     "verifyLink": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=0D7F2F773FD36F6831A2BC8304D8D8390D58110A998E3B16BE761DA8DE60DD9B"
   },
   {

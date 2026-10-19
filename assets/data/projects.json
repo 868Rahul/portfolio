@@ -1,7 +1,7 @@
 [
     {
         "title": "AgentVerse",
-        "description": "Full-stack AI code review system built with LangGraph, FastAPI, Next.js, and RAG. Features a multi-agent supervisor system, streaming chat interface using SSE, ChromaDB-based knowledge retrieval, locally hosted bge-m3 embeddings, custom tool invocation, and persistent chat history.",
+        "description": "Built a multi agent AI platform using LangGraph, FastAPI, and Next.js, featuring specialized agents for mathematical problem solving, code generation, and general queries. Integrated a RAG pipeline with ChromaDB and BGE-M3 embeddings for knowledge base question answering, alongside custom tool invocation, persistent chat history, and real time response streaming using Server-Sent Events (SSE).",
         "image": "assets/Projects/Agentverse.png",
         "tags": [
             "LangGraph",
@@ -17,8 +17,8 @@
         "demo": null
     },
     {
-        "title": "AI-Based Oral Health Analysis System",
-        "description": "Full-stack AI healthcare system for detecting and analyzing 5 oral diseases using a custom-trained YOLOv8 model. Features real-time image analysis, Flask AI inference API, authentication system, prediction history dashboard, MongoDB integration, and cloud deployment using Vercel, Render, and Hugging Face Spaces.",
+        "title": "AI Based Oral Health Analysis System",
+        "description": "Developed an AI powered oral health analysis application integrating a custom trained YOLOv8 model to identify five oral conditions: cancer, calculus, caries, gingivitis, and ulcers. Built a full stack inference pipeline using React.js, Node.js, Express.js, and Flask, with confidence score tracking, user authentication, MongoDB Atlas storage, and prediction history. Deployed the application using Vercel, Render, and Hugging Face Spaces.",
         "image": "assets/Projects/oral-ai.png",
         "tags": [
             "YOLOv8",
@@ -35,7 +35,7 @@
     },
     {
         "title": "Customer Churn Prediction System",
-        "description": "End-to-end machine learning system to predict customer churn using real-world Telco data. Includes data cleaning, feature engineering, pipelines, model comparison, explainable AI, and Streamlit deployment with churn probability and risk level.",
+        "description": "End to end machine learning system to predict customer churn using real world Telco data. Includes data cleaning, feature engineering, pipelines, model comparison, explainable AI, and Streamlit deployment with churn probability and risk level.",
         "image": "assets/Projects/customer-churn.png",
         "tags": [
             "Machine Learning",
@@ -50,7 +50,7 @@
     },
     {
         "title": "IPL 50+ Score Prediction System",
-        "description": "End-to-end data analytics to machine learning system to predict whether a batsman will score 50+ runs. Includes EDA, feature engineering, data leakage prevention, Gradient Boosting model, and Streamlit deployment.",
+        "description": "End to end data analytics to machine learning system to predict whether a batsman will score 50+ runs. Includes EDA, feature engineering, data leakage prevention, Gradient Boosting model, and Streamlit deployment.",
         "image": "assets/Projects/ipl-50plus.png",
         "tags": [
             "Data Science",
@@ -65,7 +65,7 @@
     },
     {
         "title": "MediLog",
-        "description": "Medical data platform for simplified patient record management and real-time access to critical information (First Hackathon)",
+        "description": "Medical data platform for simplified patient record management and real time access to critical information (First Hackathon)",
         "image": "assets/Projects/medilog.png",
         "tags": [
             "MERN Stack",
@@ -77,7 +77,7 @@
     },
     {
         "title": "Drone Surveillance System",
-        "description": "AI-powered anomaly detection, face recognition, and real-time monitoring for public & high-security areas (Second Hackathon)",
+        "description": "Developed an intelligent drone surveillance system integrating YOLOv11 based object detection, FaceNet facial recognition, and crowd density analysis across drone and CCTV video feeds. Implemented asynchronous communication using FastAPI and WebSockets and explored PPO based reinforcement learning for autonomous drone navigation in a PyBullet simulation.",
         "image": "assets/Projects/drone-surveillance.png",
         "tags": [
             ".NET",
@@ -85,12 +85,12 @@
             "OpenCV",
             "WebSocket"
         ],
-        "github": "https://github.com/RohanSali/Drone-Surveillance-System",
+        "github": "https://github.com/868Rahul/Drone-Surveillance-System",
         "demo": "https://aadim112.github.io/HM0055_Code200/"
     },
     {
         "title": "ReelLocal",
-        "description": "MERN platform where shopkeepers submit videos for editors to create reels, with built-in real-time chat after project acceptance",
+        "description": "MERN platform where shopkeepers submit videos for editors to create reels, with built in real time chat after project acceptance",
         "image": "assets/Projects/reellocal.png",
         "tags": [
             "MERN Stack",

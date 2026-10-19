@@ -32,11 +32,10 @@ const experiences = [
     company: "RVNS Solutions Private Limited",
     period: "Feb 2026 - May 2026",
     description: [
-        "Completed a 3-month internship focused on Python programming, data analysis, visualization, and Machine Learning concepts.",
-        "Worked with NumPy, Pandas, Matplotlib, and Seaborn for data preprocessing and analysis.",
-        "Implemented supervised and unsupervised learning algorithms including Linear Regression, Logistic Regression, KNN, Decision Trees, Random Forest, and K-Means Clustering.",
-        "Built mini machine learning projects and performed model evaluation and optimization.",
-        "Gained practical exposure to real-world machine learning workflows and end-to-end project development."
+        "Integrated a custom trained YOLOv8 model into an AI powered oral health analysis application to detect five oral conditions.",
+        "Developed backend integrations using React.js, Node.js, Express.js, and Flask to connect AI inference with application functionality.",
+        "Implemented support for authentication, confidence score tracking, and prediction history management.",
+        "Supported cloud deployment across Vercel, Render, and Hugging Face Spaces for accessible AI inference and user testing."
     ],
     type: "experience"
   },
@@ -46,11 +45,10 @@ const experiences = [
     company: "CodeAlpha",
     period: "Jan 2026 - Feb 2026",
     description: [
-        "Developed predictive analytics models for real-world problems including Credit Risk Prediction, Customer Churn Prediction, and Breast Cancer Classification.",
-        "Applied comprehensive data preprocessing and feature engineering techniques to enhance model accuracy.",
-        "Trained and optimized various algorithms such as Logistic Regression, Random Forest, and Support Vector Machine (SVM).",
-        "Achieved high performance benchmarks across key metrics including Accuracy, F1-score, and ROC-AUC.",
-        "Gained hands-on experience in end-to-end ML workflows, including model evaluation and hyperparameter tuning."
+        "Developed predictive machine learning models for Credit Risk Prediction, Customer Churn Prediction, and Breast Cancer Classification.",
+        "Applied data preprocessing and feature engineering techniques to prepare datasets and improve model performance.",
+        "Trained and evaluated machine learning algorithms including Logistic Regression, Random Forest, and Support Vector Machine (SVM).",
+        "Evaluated model performance using Accuracy, F1-score, and ROC-AUC metrics."
     ],
     type: "experience"
   },
@@ -74,7 +72,7 @@ async function loadProjects() {
       throw new Error('Projects data is not an array');
     }
 
-    container.innerHTML = projects.map(project => {
+    container.innerHTML = projects.map((project, index) => {
       const title = project.title || '';
       const description = project.description || '';
       const github = project.github || '';
@@ -128,9 +126,15 @@ async function loadProjects() {
           <h3 class="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors">
             ${escapeHtml(title)}
           </h3>
-          <p class="text-sm text-muted-foreground mb-4 line-clamp-2">
+          <p id="project-description-${index}" class="project-description text-sm text-muted-foreground line-clamp-2">
             ${escapeHtml(description)}
           </p>
+          ${description.length > 100 ? `
+            <button type="button" class="project-description-toggle" aria-expanded="false"
+              aria-controls="project-description-${index}">
+              Read more
+            </button>
+          ` : ''}
           <div class="flex flex-wrap gap-2">
             ${tags.map(tag => `
               <span class="project-tag">${escapeHtml(tag)}</span>
@@ -140,6 +144,18 @@ async function loadProjects() {
       </article>
     `;
     }).join('');
+
+      container.querySelectorAll('.project-description-toggle').forEach(toggle => {
+        const description = document.getElementById(toggle.getAttribute('aria-controls'));
+        if (!description) return;
+
+        toggle.addEventListener('click', () => {
+          const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+          description.classList.toggle('line-clamp-2', isExpanded);
+          toggle.setAttribute('aria-expanded', String(!isExpanded));
+          toggle.textContent = isExpanded ? 'Read more' : 'Show less';
+        });
+      });
   } catch (error) {
     const container = document.getElementById('projects-container');
     console.error('Error loading projects:', error);
@@ -201,7 +217,12 @@ async function loadCertifications() {
             </h3>
             <p class="text-sm text-muted-foreground mb-1">${escapeHtml(issuer)}</p>
             <p class="text-xs text-muted-foreground mb-1">${escapeHtml(date)}</p>
-            ${credentialId ? `<p class="text-xs text-muted-foreground/70 mb-4 break-words certification-credential-id">${escapeHtml(credentialId)}</p>` : '<p class="text-xs text-muted-foreground/70 mb-4 certification-credential-id"></p>'}
+            ${credentialId ? `
+              <div class="certification-credential mb-4">
+                <p class="text-xs font-semibold text-muted-foreground mb-1">Credential ID</p>
+                <p class="text-xs text-muted-foreground/70 certification-credential-id">${escapeHtml(credentialId)}</p>
+              </div>
+            ` : ''}
         </div>
         ${verifyLink && verifyLink !== '' && verifyLink !== '#' ? `
           <a href="${escapeHtml(verifyLink)}" target="_blank" rel="noopener noreferrer" 
@@ -433,7 +454,7 @@ async function loadEducation() {
               </div>
             </div>
             <p class="text-muted-foreground">
-              Status: <span class="font-semibold">${escapeHtml(status)}</span>
+              Status: <span class="font-semibold ${status.toLowerCase() === 'current' ? 'status-current' : ''}">${escapeHtml(status)}</span>
             </p>
           </div>
         </div>

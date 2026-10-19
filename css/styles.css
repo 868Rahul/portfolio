@@ -281,6 +281,29 @@ h6 {
   transform: translateY(-8px);
 }
 
+.project-description-toggle {
+  display: inline-flex;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: hsl(var(--primary));
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.project-description-toggle:hover {
+  text-decoration: underline;
+}
+
+.project-description-toggle:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 .skill-card {
   background: hsl(var(--card));
   border-radius: 0.75rem;
@@ -315,6 +338,14 @@ h6 {
   overflow-wrap: anywhere;
   word-break: break-word;
   hyphens: auto;
+}
+
+.status-current {
+  color: hsl(142 71% 55%);
+}
+
+.dark .status-current {
+  color: hsl(142 71% 55%);
 }
 
 /* Image container in certification card - clickable */
